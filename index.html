@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://kit.fontawesome.com/fe6bbb0a27.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body class="bg-base relative">
+    <header class="fixed top-0 w-full z-100">
+        <nav class="flex justify-between p-4 text-text-primary">
+            <div class="text-lg">Home Drip</div>
+
+            <div class="hidden md:block">
+                <ul class="flex gap-5">
+                    <a href="#"><li>Shop</li></a>
+                    <a href="#"><li>Collections</li></a>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Contact</li></a>
+                </ul>
+            </div>
+
+            <div class="hidden md:block">
+                <button>Shop now</button>
+            </div>
+
+            <div id="hamburger" class="md:hidden w-8 h-8 flex justify-center gap-3 rotate-90">
+                <span id="bar1" class="border"></span>
+                <span id="bar2" class="border"></span>
+                <span id="bar3" class="border"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="px-5">
+
+        <!-- Hero Section -->
+        <section class="w-full mb-15">
+
+            <div class="mt-30 flex flex-col gap-5">
+
+                <div class="rounded-xl md:hidden"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt="" class="rounded-xl"></div>
+
+                <div class="text-white z-10 flex-1 flex flex-col gap-5">
+                    <div>
+                        <h1 class="text-2xl font-semibold mb-2">Furniture that fits your life</h1>
+
+                        <p class="text-text-muted">Handcrafted pieces built to last, delivered to your door.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-3 text-center font-bold">
+                        <a href="#" class="px-4 py-2 bg-primary text-surface rounded-lg">View our work</a>
+                        <a href="#" class="px-4 py-2 rounded-lg outline outline-text-muted">Get a quote</a>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex-1"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt=""></div>
+
+            </div>
+
+        </section>
+
+        <!-- Browse Our Category -->
+        <section class="mb-15">
+
+            <div>
+                <h2 class="text-white text-xl font-semibold">Browse our collections</h2>
+                <P class="text-text-muted mb-5">See the styles we work in</P>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="relative text-text-muted">
+                        <div class="absolute bg-base/50 w-full h-full"></div>
+                        
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790334566/brown-chair-tv-console_bxjtbb.jpg" alt="">
+
+                        <div class="absolute top-2 left-2"><i class="fa-solid fa-couch"></i></div>
+                        <div class="absolute bottom-2 left-2 font-bold">Living Room</div>
+                    </div>
+
+                    <div class="relative text-text-muted bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790168865/147936d4-1750-4619-88d1-a25b05a998a7_lohdo0.jpg)] bg-cover">
+                        <div class="absolute bg-base/50 w-full h-full"></div>
+
+                        <div class="absolute top-2 left-2"><i class="fa-solid fa-bed"></i></div>
+                        <div class="absolute bottom-2 left-2 font-bold">Bedroom</div>
+                    </div>
+
+                    <div class="relative text-text-muted bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790337154/black-white-table-1_vdnwpt.jpg)] bg-cover">
+                        <div class="absolute bg-base/50 w-full h-full"></div>
+                        
+                        <div class="absolute top-2 left-2"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790338734/free_icon_1_fcdsuo.svg" alt="" class="w-5 h-5"></div>
+                        <div class="absolute bottom-2 left-2 font-bold">Tables</div>
+                    </div>
+
+                    <div class="relative text-text-muted">
+                        <div class="absolute bg-base/50 w-full h-full"></div>
+                        
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790403546/dark-brown-table_etonez.jpg" alt="">
+
+                        <div class="absolute top-2 left-2"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790400155/office_desk_studio_desk_chair_furniture_table_lamp_office_icon_124445_iwxhak.svg" alt="" class="w-5 h-5"></div>
+                        <div class="absolute bottom-2 left-2 font-bold">Office</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Featured Pieces -->
+        <section class="mb-15">
+            <div class="flex flex-col">
+                <div class="mb-5">
+                    <h2 class="text-white text-xl font-semibold">Featured Pieces</h2>
+                    <p class="text-text-muted">A few of our favorites</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%]">
+
+                        <div>
+                            <h3 class="text-white font-bold">Under Stair Shelf</h3>
+                            <p class="text-text-muted">Living room</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg" alt="Clean work desk" class="h-[60%]">
+
+                        <div>
+                            <h3 class="text-white font-bold">Clean Work Desk</h3>
+                            <p class="text-text-muted">Office</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg" alt="Black Bed" class="h-[60%]">
+
+                        <div>
+                            <h3 class="text-white font-bold">Black Bedframe</h3>
+                            <p class="text-text-muted">Bedroom</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%]">
+
+                        <div>
+                            <h3 class="text-white font-bold">Brown Drawer</h3>
+                            <p class="text-text-muted">Bedroom</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="mt-5 py-2 px-4 outline outline-text-muted text-white rounded-lg mx-auto">See more pieces</a>
+
+            </div>
+
+        </section>
+
+        <!-- Why Home Drip -->
+         <section class="mb-15">
+
+            <div>
+
+                <div class="mb-5">
+                    <h2 class="text-white text-xl font-semibold">Why Home Drip?</h2>
+                    <p class="text-text-muted">What sets our work apart?</p>
+                </div>
+
+                <div class="flex flex-col gap-5">
+
+                    <div class="flex items-start gap-3 bg-surface p-4 rounded-lg">
+                        <i class="fa-solid fa-hammer text-white p-4 bg-primary rounded-lg"></i>
+
+                        <div>
+                            <h3 class="text-white font-semibold">Handcrafted Quality</h3>
+                            <p class="text-text-muted">Every piece is built to order, not mass-produced.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-surface p-4 rounded-lg">
+                        
+                        <i class="fa-solid fa-truck text-white p-4 bg-primary rounded-lg"></i>
+
+                        <div>
+                            <h3 class="text-white font-semibold">Nationwide delivery</h3>
+                            <p class="text-text-muted">Wherever you are, we get it to your door.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-surface p-4 rounded-lg">
+                        
+                        <i class="fa-solid fa-check-double text-white p-4 bg-primary rounded-lg"></i>
+
+                        <div>
+                            <h3 class="text-white font-semibold">Built to last</h3>
+                            <p class="text-text-muted">Quality materials and craftsmanship you can trust.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+         </section>
+
+         <!-- Testimonials -->
+          <section class="mb-15">
+
+            <div>
+                <div class="mb-5">
+                    <h2 class="text-white text-xl font-semibold">What our customers say</h2>
+                    <p class="text-text-muted">A few words from people we've worked with</p>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-5">
+
+                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg">
+                            <i class="fa-solid fa-quote-left text-primary"></i>
+
+                            <p class="text-white">The quality was way beyond what I expected for the price. My living room finally feels finished.</p>
+
+                            <div class="flex items-start gap-5">
+                                <div class="w-10 h-10 bg-base rounded-full"></div>
+
+                                <div>
+                                    <h4 class="text-white font-semibold">Chidinma A.</h4>
+                                    <p class="text-text-muted">Lagos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col gap-5">
+
+                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg">
+                            <i class="fa-solid fa-quote-left text-primary"></i>
+
+                            <p class="text-white">Delivery was smooth and the piece looked even better in person. Already planning my next order.</p>
+
+                            <div class="flex items-start gap-5">
+                                <div class="w-10 h-10 bg-base rounded-full"></div>
+
+                                <div>
+                                    <h4 class="text-white font-semibold">Tunde O.</h4>
+                                    <p class="text-text-muted">Abuja</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col gap-5">
+
+                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg">
+                            <i class="fa-solid fa-quote-left text-primary"></i>
+
+                            <p class="text-white">From the first message to the final delivery, everyone was patient and answered every question I had. It didn't feel like buying furniture blind</p>
+
+                            <div class="flex items-start gap-5">
+                                <div class="w-10 h-10 bg-base rounded-full"></div>
+
+                                <div>
+                                    <h4 class="text-white font-semibold">Ifeoma B.</h4>
+                                    <p class="text-text-muted">Port Harcourt</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+          </section>
+
+          <!-- Contact Section -->
+           <section class="mb-15">
+
+                <div>
+
+                    <div class="mb-5">
+                        <h2 class="text-white font-semibold text-xl">Ready to bring this into your home?</h2>
+                        <p class="text-text-muted">Tell us what you're looking for and we'll get back to you with options and pricing.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-3 text-center">
+                        <a href="#" class="px-4 py-2 bg-primary text-base font-bold rounded-lg">Chat with us on WhatsApp</a>
+                        <a href="#" class="px-4 py-2 outline outline-text-muted text-white font-bold rounded-lg">Get a quote</a>
+                    </div>
+                    
+                </div>
+
+           </section>
+
+           <!-- Footer Section -->
+            <section class="mb-5 pt-5 border-t border-text-muted">
+
+                <div>
+                    <div class="flex flex-col gap-4 items-center">
+                        <h2 class="text-white text-xl font-semibold">Home Drip</h2>
+                        <p class="text-text-muted text-center">Handcrafted furniture and interiors, built to fit your life.</p>
+                        
+                        <ul class="text-white flex gap-3">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Featured</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+
+                        <div class="text-primary text-2xl flex gap-5">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+
+                        <p class="text-text-muted">&copy;2026 Home Drip. All rights reserved.</p>
+                    </div>
+                </div>
+
+            </section>
+
+    </main>
+
+    <footer></footer>
+</body>
+</html>
