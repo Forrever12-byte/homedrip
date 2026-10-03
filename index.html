@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,63 +9,71 @@
 </head>
 <body class="bg-base relative">
     <header class="fixed top-0 w-full z-100">
-        <nav class="flex justify-between p-4 text-text-primary">
+        <nav id="navbar" class="flex justify-between p-4 text-text-primary">
             <div class="text-lg">Home Drip</div>
 
             <div class="hidden md:block">
                 <ul class="flex gap-5">
-                    <a href="#"><li>Shop</li></a>
-                    <a href="#"><li>Collections</li></a>
-                    <a href="#"><li>About</li></a>
-                    <a href="#"><li>Contact</li></a>
+                    <a href="#collections" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Collections</li></a>
+                    <a href="#our-work" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Our Work</li></a>
+                    <a href="#about" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>About</li></a>
                 </ul>
             </div>
 
             <div class="hidden md:block">
-                <button>Shop now</button>
+                <a href="#contact" class="py-2 px-4 outline rounded-lg hover:outline hover:outline-primary hover:text-primary transition duration-400">Contact</a>
             </div>
 
-            <div id="hamburger" class="md:hidden w-8 h-8 flex justify-center gap-3 rotate-90">
-                <span id="bar1" class="border"></span>
-                <span id="bar2" class="border"></span>
-                <span id="bar3" class="border"></span>
+            <div id="hamburger" class="md:hidden w-6 h-6 flex flex-col justify-center gap-2">
+                <span id="bar1" class="w-6 h-0.5 bg-text-primary rounded-full transition-transform duration-700"></span>
+                <span id="bar2" class="w-6 h-0.5 bg-text-primary rounded-full transition-transform duration-700"></span>
+                <span id="bar3" class="w-6 h-0.5 bg-text-primary rounded-full transition-transform duration-700"></span>
             </div>
         </nav>
+
+        <div id="mobile-menu" class="hidden w-full h-auto p-5 bg-primary opacity-0 -translate-y-4 transition-all duration-700 pointer-events-none">
+            <ul class="text-center flex flex-col gap-3">
+                <a href="#collections" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Collections</li></a>
+                <a href="#our-work" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Our Work</li></a>
+                <a href="#about" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>About</li></a>
+                <a href="#contact" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Contact</li></a>
+            </ul>
+        </div>
     </header>
 
-    <main class="px-5">
+    <main class="px-5 md:px-10">
 
         <!-- Hero Section -->
         <section class="w-full mb-15">
 
-            <div class="mt-30 flex flex-col gap-5">
+            <div class="mt-30 flex flex-col gap-5 md:flex-row">
 
                 <div class="rounded-xl md:hidden"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt="" class="rounded-xl"></div>
 
-                <div class="text-white z-10 flex-1 flex flex-col gap-5">
+                <div class="text-white z-10 flex-1 flex flex-col gap-5 md:justify-center md:gap-10">
                     <div>
-                        <h1 class="text-2xl font-semibold mb-2">Furniture that fits your life</h1>
+                        <h1 class="text-2xl font-semibold mb-2 md:text-3xl">Furniture that fits your life</h1>
 
-                        <p class="text-text-muted">Handcrafted pieces built to last, delivered to your door.</p>
+                        <p class="text-text-muted md:text-lg">Handcrafted pieces built to last, delivered to your door.</p>
                     </div>
 
-                    <div class="flex flex-col gap-3 text-center font-bold">
-                        <a href="#" class="px-4 py-2 bg-primary text-surface rounded-lg">View our work</a>
-                        <a href="#" class="px-4 py-2 rounded-lg outline outline-text-muted">Get a quote</a>
+                    <div class="flex flex-col gap-3 text-center font-bold md:w-[70%] lg:flex-row">
+                        <a href="#our-work" class="px-4 py-2 bg-primary text-surface rounded-lg hover:bg-primary/50 hover:text-white lg:flex-1">View our work</a>
+                        <a href="https://wa.me/2348119739827" class="px-4 py-2 outline rounded-lg hover:bg-surface lg:flex-1">Chat with us</a>
                     </div>
                 </div>
 
-                <div class="hidden md:flex-1"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt=""></div>
+                <div class="hidden md:flex w-[50%] rounded-lg overflow-hidden"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt=""></div>
 
             </div>
 
         </section>
 
-        <!-- Browse Our Category -->
-        <section class="mb-15">
+        <!-- Browse Our Collections -->
+        <section id="collections" class="mb-15">
 
             <div>
-                <h2 class="text-white text-xl font-semibold">Browse our collections</h2>
+                <h2 class="text-white text-xl font-semibold md:text-2xl">Browse our collections</h2>
                 <P class="text-text-muted mb-5">See the styles we work in</P>
 
                 <div class="grid grid-cols-2 gap-3">
@@ -105,15 +113,15 @@
 
         </section>
 
-        <!-- Featured Pieces -->
-        <section class="mb-15">
+        <!-- Our Work -->
+        <section id="our-work" class="mb-15">
             <div class="flex flex-col">
                 <div class="mb-5">
-                    <h2 class="text-white text-xl font-semibold">Featured Pieces</h2>
-                    <p class="text-text-muted">A few of our favorites</p>
+                    <h2 class="text-white text-xl font-semibold md:text-2xl">Our Work</h2>
+                    <p class="text-text-muted md:text-lg">A few of our favorites</p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-3">
+                <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
 
                     <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%]">
@@ -142,7 +150,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
+                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:block">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%]">
 
                         <div>
@@ -152,23 +160,23 @@
                     </div>
                 </div>
 
-                <a href="#" class="mt-5 py-2 px-4 outline outline-text-muted text-white rounded-lg mx-auto">See more pieces</a>
+                <a href="#" class="mt-5 py-2 px-4 outline outline-text-muted text-white rounded-lg mx-auto md:ml-0 hover:bg-primary transition duration-300">See more pieces</a>
 
             </div>
 
         </section>
 
         <!-- Why Home Drip -->
-         <section class="mb-15">
+         <section id="about" class="mb-15">
 
             <div>
 
                 <div class="mb-5">
-                    <h2 class="text-white text-xl font-semibold">Why Home Drip?</h2>
-                    <p class="text-text-muted">What sets our work apart?</p>
+                    <h2 class="text-white text-xl font-semibold md:text-2xl">Why Home Drip?</h2>
+                    <p class="text-text-muted md:text-lg">What sets our work apart?</p>
                 </div>
 
-                <div class="flex flex-col gap-5">
+                <div class="flex flex-col md:flex-row gap-5">
 
                     <div class="flex items-start gap-3 bg-surface p-4 rounded-lg">
                         <i class="fa-solid fa-hammer text-white p-4 bg-primary rounded-lg"></i>
@@ -213,10 +221,10 @@
                     <p class="text-text-muted">A few words from people we've worked with</p>
                 </div>
 
-                <div class="flex flex-col gap-3">
-                    <div class="flex flex-col gap-5">
+                <div class="flex flex-col md:flex-row gap-3">
+                    <div class="flex flex-col gap-5 md:w-[33%]">
 
-                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg">
+                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg md:h-60 md:justify-between">
                             <i class="fa-solid fa-quote-left text-primary"></i>
 
                             <p class="text-white">The quality was way beyond what I expected for the price. My living room finally feels finished.</p>
@@ -233,9 +241,9 @@
 
                     </div>
 
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 md:w-[33%]">
 
-                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg">
+                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg md:h-60 md:justify-between">
                             <i class="fa-solid fa-quote-left text-primary"></i>
 
                             <p class="text-white">Delivery was smooth and the piece looked even better in person. Already planning my next order.</p>
@@ -252,9 +260,9 @@
 
                     </div>
 
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 md:w-[33%]">
 
-                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg">
+                        <div class="p-4 flex flex-col gap-3 bg-surface rounded-lg md:h-60 md:justify-between">
                             <i class="fa-solid fa-quote-left text-primary"></i>
 
                             <p class="text-white">From the first message to the final delivery, everyone was patient and answered every question I had. It didn't feel like buying furniture blind</p>
@@ -278,9 +286,9 @@
           </section>
 
           <!-- Contact Section -->
-           <section class="mb-15">
+           <section id="contact" class="mb-15 md:text-center md:bg-surface md:py-20 md:rounded-lg">
 
-                <div>
+                <div class="md:w-[60%] lg:w-full md:mx-auto">
 
                     <div class="mb-5">
                         <h2 class="text-white font-semibold text-xl">Ready to bring this into your home?</h2>
@@ -288,43 +296,43 @@
                     </div>
 
                     <div class="flex flex-col gap-3 text-center">
-                        <a href="#" class="px-4 py-2 bg-primary text-base font-bold rounded-lg">Chat with us on WhatsApp</a>
-                        <a href="#" class="px-4 py-2 outline outline-text-muted text-white font-bold rounded-lg">Get a quote</a>
+                        <a href="https://wa.me/2348119739827" class="px-4 py-2 bg-primary text-white font-bold rounded-lg md:w-[50%] md:mx-auto hover:text-base">Chat with us on WhatsApp</a>
                     </div>
                     
                 </div>
 
            </section>
-
-           <!-- Footer Section -->
-            <section class="mb-5 pt-5 border-t border-text-muted">
-
-                <div>
-                    <div class="flex flex-col gap-4 items-center">
-                        <h2 class="text-white text-xl font-semibold">Home Drip</h2>
-                        <p class="text-text-muted text-center">Handcrafted furniture and interiors, built to fit your life.</p>
-                        
-                        <ul class="text-white flex gap-3">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Collections</a></li>
-                            <li><a href="#">Featured</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-
-                        <div class="text-primary text-2xl flex gap-5">
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <i class="fa-brands fa-tiktok"></i>
-                        </div>
-
-                        <p class="text-text-muted">&copy;2026 Home Drip. All rights reserved.</p>
-                    </div>
-                </div>
-
-            </section>
-
     </main>
 
-    <footer></footer>
+    <!-- Footer Section -->
+    <footer>
+        <section class="mb-5 pt-5 border-t border-text-muted">
+
+            <div>
+                <div class="flex flex-col gap-4 items-center">
+                    <h2 class="text-white text-xl font-semibold">Home Drip</h2>
+                    <p class="text-text-muted text-center">Handcrafted furniture and interiors, built to fit your life.</p>
+                    
+                    <ul class="text-white flex gap-3">
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#our-work">Our Work</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <div class="text-primary text-2xl flex gap-5">
+                        <a href="https://www.instagram.com/_homedrip?utm_source=qr&stkn=MTdvbTRqb2RuMW4xbg=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/2348119739827"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@homedrip_ng?_r=1&_t=ZS-9ADiIRwLSNQ"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+
+                    <p class="text-text-muted">&copy;2026 Home Drip. All rights reserved.</p>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
