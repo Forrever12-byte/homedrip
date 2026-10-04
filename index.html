@@ -9,19 +9,19 @@
 </head>
 <body class="bg-base relative">
     <header class="fixed top-0 w-full z-100">
-        <nav id="navbar" class="flex justify-between p-4 text-text-primary">
-            <div class="text-lg">Home Drip</div>
+        <nav id="navbar" class="flex justify-between p-4 md:p-10 lg:px-20 text-text-primary">
+            <div class="text-lg md:text-xl lg:text-2xl">Home Drip</div>
 
             <div class="hidden md:block">
-                <ul class="flex gap-5">
+                <ul class="flex gap-5 md:text-lg md:gap-5">
                     <a href="#collections" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Collections</li></a>
                     <a href="#our-work" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Our Work</li></a>
                     <a href="#about" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>About</li></a>
                 </ul>
             </div>
 
-            <div class="hidden md:block">
-                <a href="#contact" class="py-2 px-4 outline rounded-lg hover:outline hover:outline-primary hover:text-primary transition duration-400">Contact</a>
+            <div class="hidden md:block hover:-translate-y-2 transition duration-300">
+                <a href="#contact" class="py-2 px-4 outline rounded-lg hover:outline hover:outline-primary hover:text-primary transition duration-400 md:text-lg">Contact</a>
             </div>
 
             <div id="hamburger" class="md:hidden w-6 h-6 flex flex-col justify-center gap-2">
@@ -41,23 +41,23 @@
         </div>
     </header>
 
-    <main class="px-5 md:px-10">
+    <main class="px-5 md:px-10 lg:px-20">
 
         <!-- Hero Section -->
         <section class="w-full mb-15">
 
-            <div class="mt-30 flex flex-col gap-5 md:flex-row">
+            <div class="mt-30 flex flex-col gap-5 md:flex-row lg:justify-center lg:items-center">
 
                 <div class="rounded-xl md:hidden"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt="" class="rounded-xl"></div>
 
                 <div class="text-white z-10 flex-1 flex flex-col gap-5 md:justify-center md:gap-10">
-                    <div>
-                        <h1 class="text-2xl font-semibold mb-2 md:text-3xl">Furniture that fits your life</h1>
+                    <div class="lg:mx-auto">
+                        <h1 class="text-2xl font-semibold mb-2 md:text-3xl lg:text-4xl">Furniture that fits your life</h1>
 
-                        <p class="text-text-muted md:text-lg">Handcrafted pieces built to last, delivered to your door.</p>
+                        <p class="text-text-muted md:text-lg lg:text-xl">Handcrafted pieces built to last, delivered to your door.</p>
                     </div>
 
-                    <div class="flex flex-col gap-3 text-center font-bold md:w-[70%] lg:flex-row">
+                    <div class="flex flex-col gap-3 text-center font-bold md:w-[70%] lg:flex-row lg:text-lg lg:mx-auto">
                         <a href="#our-work" class="px-4 py-2 bg-primary text-surface rounded-lg hover:bg-primary/50 hover:text-white lg:flex-1">View our work</a>
                         <a href="https://wa.me/2348119739827" class="px-4 py-2 outline rounded-lg hover:bg-surface lg:flex-1">Chat with us</a>
                     </div>
@@ -73,40 +73,42 @@
         <section id="collections" class="mb-15">
 
             <div>
-                <h2 class="text-white text-xl font-semibold md:text-2xl">Browse our collections</h2>
-                <P class="text-text-muted mb-5">See the styles we work in</P>
+                <div class="mb-5 lg:text-center lg:mb-10">
+                    <h2 class="text-white text-xl font-semibold md:text-2xl lg:text-3xl">Browse our collections</h2>
+                    <P class="text-text-muted md:text-lg lg:text-xl">See the styles we work in</P>
+                </div>
 
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="relative text-text-muted">
+                <div class="grid grid-cols-2 lg:grid-cols-4 lg:gap-8 gap-3">
+                    <div class="relative text-text-muted lg:bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790334566/brown-chair-tv-console_bxjtbb.jpg)] lg:bg-cover rounded-lg">
                         <div class="absolute bg-base/50 w-full h-full"></div>
                         
-                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790334566/brown-chair-tv-console_bxjtbb.jpg" alt="">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790334566/brown-chair-tv-console_bxjtbb.jpg" alt="" class="lg:hidden">
 
-                        <div class="absolute top-2 left-2"><i class="fa-solid fa-couch"></i></div>
-                        <div class="absolute bottom-2 left-2 font-bold">Living Room</div>
+                        <div class="absolute top-2 left-2 md:text-lg lg:text-xl md:left-4 md:top-4"><i class="fa-solid fa-couch"></i></div>
+                        <div class="absolute bottom-2 left-2 font-bold md:text-lg lg:text-xl md:left-4 md:bottom-4">Living Room</div>
                     </div>
 
-                    <div class="relative text-text-muted bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790168865/147936d4-1750-4619-88d1-a25b05a998a7_lohdo0.jpg)] bg-cover">
+                    <div class="relative text-text-muted bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790168865/147936d4-1750-4619-88d1-a25b05a998a7_lohdo0.jpg)] bg-cover rounded-lg">
                         <div class="absolute bg-base/50 w-full h-full"></div>
 
-                        <div class="absolute top-2 left-2"><i class="fa-solid fa-bed"></i></div>
-                        <div class="absolute bottom-2 left-2 font-bold">Bedroom</div>
+                        <div class="absolute top-2 left-2 md:text-lg lg:text-xl md:left-4 md:top-4"><i class="fa-solid fa-bed"></i></div>
+                        <div class="absolute bottom-2 left-2 font-bold md:text-lg lg:text-xl md:left-4 md:bottom-4">Bedroom</div>
                     </div>
 
-                    <div class="relative text-text-muted bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790337154/black-white-table-1_vdnwpt.jpg)] bg-cover">
+                    <div class="relative text-text-muted bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790337154/black-white-table-1_vdnwpt.jpg)] bg-cover rounded-lg">
                         <div class="absolute bg-base/50 w-full h-full"></div>
                         
-                        <div class="absolute top-2 left-2"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790338734/free_icon_1_fcdsuo.svg" alt="" class="w-5 h-5"></div>
-                        <div class="absolute bottom-2 left-2 font-bold">Tables</div>
+                        <div class="absolute top-2 left-2 md:text-lg lg:text-xl md:left-4 md:top-4"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790338734/free_icon_1_fcdsuo.svg" alt="" class="w-5 h-5"></div>
+                        <div class="absolute bottom-2 left-2 font-bold md:text-lg lg:text-xl md:left-4 md:bottom-4">Tables</div>
                     </div>
 
-                    <div class="relative text-text-muted">
+                    <div class="relative text-text-muted rounded-lg overflow-hidden">
                         <div class="absolute bg-base/50 w-full h-full"></div>
                         
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790403546/dark-brown-table_etonez.jpg" alt="">
 
-                        <div class="absolute top-2 left-2"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790400155/office_desk_studio_desk_chair_furniture_table_lamp_office_icon_124445_iwxhak.svg" alt="" class="w-5 h-5"></div>
-                        <div class="absolute bottom-2 left-2 font-bold">Office</div>
+                        <div class="absolute top-2 left-2 md:text-lg lg:text-xl md:left-4 md:top-4"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790400155/office_desk_studio_desk_chair_furniture_table_lamp_office_icon_124445_iwxhak.svg" alt="" class="w-5 h-5"></div>
+                        <div class="absolute bottom-2 left-2 font-bold md:text-lg lg:text-xl md:left-4 md:bottom-4">Office</div>
                     </div>
                 </div>
             </div>
@@ -116,51 +118,51 @@
         <!-- Our Work -->
         <section id="our-work" class="mb-15">
             <div class="flex flex-col">
-                <div class="mb-5">
-                    <h2 class="text-white text-xl font-semibold md:text-2xl">Our Work</h2>
-                    <p class="text-text-muted md:text-lg">A few of our favorites</p>
+                <div class="mb-5 lg:text-center lg:mb-10">
+                    <h2 class="text-white text-xl font-semibold md:text-2xl lg:text-3xl">Our Work</h2>
+                    <p class="text-text-muted md:text-lg lg:text-xl">A few of our favorites</p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
-                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%]">
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%] lg:h-[70%]">
 
-                        <div>
-                            <h3 class="text-white font-bold">Under Stair Shelf</h3>
-                            <p class="text-text-muted">Living room</p>
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Under Stair Shelf</h3>
+                            <p class="text-text-muted lg:text-lg">Living room</p>
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
-                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg" alt="Clean work desk" class="h-[60%]">
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg" alt="Clean work desk" class="h-[60%] lg:h-[70%]">
 
-                        <div>
-                            <h3 class="text-white font-bold">Clean Work Desk</h3>
-                            <p class="text-text-muted">Office</p>
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Clean Work Desk</h3>
+                            <p class="text-text-muted lg:text-lg">Office</p>
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg">
-                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg" alt="Black Bed" class="h-[60%]">
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg" alt="Black Bed" class="h-[60%] lg:h-[70%]">
 
-                        <div>
-                            <h3 class="text-white font-bold">Black Bedframe</h3>
-                            <p class="text-text-muted">Bedroom</p>
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Black Bedframe</h3>
+                            <p class="text-text-muted lg:text-lg">Bedroom</p>
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:block">
-                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%]">
+                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%] lg:h-[70%]">
 
-                        <div>
-                            <h3 class="text-white font-bold">Brown Drawer</h3>
-                            <p class="text-text-muted">Bedroom</p>
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Brown Drawer</h3>
+                            <p class="text-text-muted lg:text-lg">Bedroom</p>
                         </div>
                     </div>
                 </div>
 
-                <a href="#" class="mt-5 py-2 px-4 outline outline-text-muted text-white rounded-lg mx-auto md:ml-0 hover:bg-primary transition duration-300">See more pieces</a>
+                <a href="#" class="mt-5 py-2 px-4 outline outline-text-muted text-white rounded-lg mx-auto hover:bg-primary transition duration-300 lg:text-xl">See more pieces</a>
 
             </div>
 
@@ -171,39 +173,39 @@
 
             <div>
 
-                <div class="mb-5">
-                    <h2 class="text-white text-xl font-semibold md:text-2xl">Why Home Drip?</h2>
-                    <p class="text-text-muted md:text-lg">What sets our work apart?</p>
+                <div class="mb-5 lg:text-center lg:mb-10">
+                    <h2 class="text-white text-xl font-semibold md:text-2xl lg:text-3xl">Why Home Drip?</h2>
+                    <p class="text-text-muted md:text-lg lg:text-xl">What sets our work apart?</p>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-5">
+                <div class="flex flex-col md:flex-row justify-center gap-5">
 
-                    <div class="flex items-start gap-3 bg-surface p-4 rounded-lg">
-                        <i class="fa-solid fa-hammer text-white p-4 bg-primary rounded-lg"></i>
+                    <div class="flex lg:flex-col lg:p-8 items-start gap-3 bg-surface p-4 rounded-lg">
+                        <i class="fa-solid fa-hammer text-white p-4 bg-primary rounded-lg lg:text-xl"></i>
 
                         <div>
-                            <h3 class="text-white font-semibold">Handcrafted Quality</h3>
-                            <p class="text-text-muted">Every piece is built to order, not mass-produced.</p>
+                            <h3 class="text-white font-semibold lg:text-xl">Handcrafted Quality</h3>
+                            <p class="text-text-muted lg:text-lg">Every piece is built to order, not mass-produced.</p>
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-3 bg-surface p-4 rounded-lg">
+                    <div class="flex lg:flex-col lg:p-8 items-start gap-3 bg-surface p-4 rounded-lg">
                         
-                        <i class="fa-solid fa-truck text-white p-4 bg-primary rounded-lg"></i>
+                        <i class="fa-solid fa-truck text-white p-4 bg-primary rounded-lg lg:text-xl"></i>
 
                         <div>
-                            <h3 class="text-white font-semibold">Nationwide delivery</h3>
-                            <p class="text-text-muted">Wherever you are, we get it to your door.</p>
+                            <h3 class="text-white font-semibold lg:text-xl">Nationwide delivery</h3>
+                            <p class="text-text-muted lg:text-lg">Wherever you are, we get it to your door.</p>
                         </div>
                     </div>
 
-                    <div class="flex items-start gap-3 bg-surface p-4 rounded-lg">
+                    <div class="flex lg:flex-col lg:p-8 items-start gap-3 bg-surface p-4  rounded-lg">
                         
-                        <i class="fa-solid fa-check-double text-white p-4 bg-primary rounded-lg"></i>
+                        <i class="fa-solid fa-check-double text-white p-4 bg-primary rounded-lg lg:text-xl"></i>
 
                         <div>
-                            <h3 class="text-white font-semibold">Built to last</h3>
-                            <p class="text-text-muted">Quality materials and craftsmanship you can trust.</p>
+                            <h3 class="text-white font-semibold lg:text-xl">Built to last</h3>
+                            <p class="text-text-muted lg:text-lg">Quality materials and craftsmanship you can trust.</p>
                         </div>
                     </div>
 
@@ -216,9 +218,9 @@
           <section class="mb-15">
 
             <div>
-                <div class="mb-5">
-                    <h2 class="text-white text-xl font-semibold">What our customers say</h2>
-                    <p class="text-text-muted">A few words from people we've worked with</p>
+                <div class="mb-5 lg:text-center lg:mb-10">
+                    <h2 class="text-white text-xl font-semibold md:text-2xl lg:text-3xl">What our customers say</h2>
+                    <p class="text-text-muted md:text-lg lg:text-xl">A few words from people we've worked with</p>
                 </div>
 
                 <div class="flex flex-col md:flex-row gap-3">
@@ -291,12 +293,12 @@
                 <div class="md:w-[60%] lg:w-full md:mx-auto">
 
                     <div class="mb-5">
-                        <h2 class="text-white font-semibold text-xl">Ready to bring this into your home?</h2>
-                        <p class="text-text-muted">Tell us what you're looking for and we'll get back to you with options and pricing.</p>
+                        <h2 class="text-white font-semibold text-xl md:text-2xl lg:text-3xl">Ready to bring this into your home?</h2>
+                        <p class="text-text-muted md:text-lg lg:text-xl">Tell us what you're looking for and we'll get back to you with options and pricing.</p>
                     </div>
 
                     <div class="flex flex-col gap-3 text-center">
-                        <a href="https://wa.me/2348119739827" class="px-4 py-2 bg-primary text-white font-bold rounded-lg md:w-[50%] md:mx-auto hover:text-base">Chat with us on WhatsApp</a>
+                        <a href="https://wa.me/2348119739827" class="px-4 py-2 bg-primary text-white font-bold rounded-lg md:w-[50%] lg:w-[25%] lg:text-lg md:mx-auto hover:text-base">Chat with us on WhatsApp</a>
                     </div>
                     
                 </div>
@@ -309,25 +311,29 @@
         <section class="mb-5 pt-5 border-t border-text-muted">
 
             <div>
-                <div class="flex flex-col gap-4 items-center">
-                    <h2 class="text-white text-xl font-semibold">Home Drip</h2>
-                    <p class="text-text-muted text-center">Handcrafted furniture and interiors, built to fit your life.</p>
+                <div class="flex flex-col gap-4 items-center lg:flex-row lg:justify-evenly">
+
+                    <div class="flex flex-col gap-4 items-center lg:items-start lg:gap-2">
+                        <h2 class="text-white text-xl font-semibold md:text-2xl">Home Drip</h2>
+                        <p class="text-text-muted text-center md:text-lg">Handcrafted furniture and interiors, built to fit your life.</p>
+                    </div>
                     
-                    <ul class="text-white flex gap-3">
-                        <li><a href="#collections">Collections</a></li>
-                        <li><a href="#our-work">Our Work</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <ul class="text-white flex gap-3 md:text-lg md:gap-5">
+                        <li><a href="#collections" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Collections</a></li>
+                        <li><a href="#our-work" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Our Work</a></li>
+                        <li><a href="#about" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">About</a></li>
+                        <li><a href="#contact" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Contact</a></li>
                     </ul>
 
-                    <div class="text-primary text-2xl flex gap-5">
-                        <a href="https://www.instagram.com/_homedrip?utm_source=qr&stkn=MTdvbTRqb2RuMW4xbg=="><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://wa.me/2348119739827"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.tiktok.com/@homedrip_ng?_r=1&_t=ZS-9ADiIRwLSNQ"><i class="fa-brands fa-tiktok"></i></a>
+                    <div class="text-primary text-2xl flex gap-5 md:text-3xl">
+                        <a href="https://www.instagram.com/_homedrip?utm_source=qr&stkn=MTdvbTRqb2RuMW4xbg==" class="hover:-translate-y-2 transition duration-400"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/2348119739827" class="hover:-translate-y-2 transition duration-400"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@homedrip_ng?_r=1&_t=ZS-9ADiIRwLSNQ" class="hover:-translate-y-2 transition duration-400"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
 
-                    <p class="text-text-muted">&copy;2026 Home Drip. All rights reserved.</p>
                 </div>
+
+                <p class="text-text-muted text-center mt-4">&copy;2026 Home Drip. All rights reserved.</p>
             </div>
 
         </section>
