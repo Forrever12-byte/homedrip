@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
     <script src="https://kit.fontawesome.com/fe6bbb0a27.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>HomeDrip</title>
 </head>
 <body class="bg-base relative">
     <header class="fixed top-0 w-full z-100">
-        <nav id="navbar" class="flex justify-between p-4 md:p-10 lg:px-20 text-text-primary">
+        <nav id="navbar" class="flex justify-between p-4 md:p-8 lg:px-20 text-text-primary">
             <div class="text-lg md:text-xl lg:text-2xl">Home Drip</div>
 
             <div class="hidden md:block">
@@ -46,24 +46,26 @@
         <!-- Hero Section -->
         <section class="w-full mb-15">
 
-            <div class="mt-30 flex flex-col gap-5 md:flex-row lg:justify-center lg:items-center">
+            <div class="mt-30 flex flex-col gap-5 md:flex-row lg:justify-center lg:items-center lg:h-[75vh] lg:overflow-hidden lg:relative lg:rounded-lg">
 
                 <div class="rounded-xl md:hidden"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt="" class="rounded-xl"></div>
 
                 <div class="text-white z-10 flex-1 flex flex-col gap-5 md:justify-center md:gap-10">
-                    <div class="lg:mx-auto">
-                        <h1 class="text-2xl font-semibold mb-2 md:text-3xl lg:text-4xl">Furniture that fits your life</h1>
+                    <div class="lg:mx-auto lg:text-center">
+                        <h1 class="text-2xl font-semibold mb-2 md:text-3xl lg:text-6xl">Furniture that fits your life</h1>
 
-                        <p class="text-text-muted md:text-lg lg:text-xl">Handcrafted pieces built to last, delivered to your door.</p>
+                        <p class="text-text-muted md:text-lg lg:text-2xl">Handcrafted pieces built to last, delivered to your door.</p>
                     </div>
 
-                    <div class="flex flex-col gap-3 text-center font-bold md:w-[70%] lg:flex-row lg:text-lg lg:mx-auto">
+                    <div class="flex flex-col gap-3 text-center font-bold md:w-[70%] lg:w-[30%] lg:flex-row lg:text-lg lg:mx-auto">
                         <a href="#our-work" class="px-4 py-2 bg-primary text-surface rounded-lg hover:bg-primary/50 hover:text-white lg:flex-1">View our work</a>
                         <a href="https://wa.me/2348119739827" class="px-4 py-2 outline rounded-lg hover:bg-surface lg:flex-1">Chat with us</a>
                     </div>
                 </div>
 
-                <div class="hidden md:flex w-[50%] rounded-lg overflow-hidden"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt=""></div>
+                <div class="hidden md:flex w-[50%] lg:w-full rounded-lg overflow-hidden lg:absolute"><img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173655/Designer_1_mxif1m.png" alt="" class="lg:w-full"></div>
+
+                <div class="lg:absolute lg:w-full lg:h-full lg:bg-black/50 top-0 left-0 z-5"></div>
 
             </div>
 
@@ -79,14 +81,14 @@
                 </div>
 
                 <div class="grid grid-cols-2 lg:grid-cols-4 lg:gap-8 gap-3">
-                    <div class="relative text-text-muted lg:bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790334566/brown-chair-tv-console_bxjtbb.jpg)] lg:bg-cover rounded-lg">
+                        <div class="relative text-text-muted lg:bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790334566/brown-chair-tv-console_bxjtbb.jpg)] lg:bg-cover rounded-lg">
                         <div class="absolute bg-base/50 w-full h-full"></div>
                         
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790334566/brown-chair-tv-console_bxjtbb.jpg" alt="" class="lg:hidden">
 
                         <div class="absolute top-2 left-2 md:text-lg lg:text-xl md:left-4 md:top-4"><i class="fa-solid fa-couch"></i></div>
                         <div class="absolute bottom-2 left-2 font-bold md:text-lg lg:text-xl md:left-4 md:bottom-4">Living Room</div>
-                    </div>
+                        </div>
 
                     <div class="relative text-text-muted bg-[url(https://res.cloudinary.com/pnfbjbp5/image/upload/v1790168865/147936d4-1750-4619-88d1-a25b05a998a7_lohdo0.jpg)] bg-cover rounded-lg">
                         <div class="absolute bg-base/50 w-full h-full"></div>

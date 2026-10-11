@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://kit.fontawesome.com/fe6bbb0a27.js" crossorigin="anonymous"></script>
+    <title>HomeDrip</title>
+</head>
+<body class="bg-base relative">
+    <header class="fixed top-0 w-full z-100">
+        <nav id="navbar" class="flex justify-between p-4 md:p-10 lg:px-20 text-text-primary">
+            <div class="text-lg md:text-xl lg:text-2xl">Home Drip</div>
+
+            <div class="hidden md:block">
+                <ul class="flex gap-5 md:text-lg md:gap-5">
+                    <a href="#collections" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Collections</li></a>
+                    <a href="#our-work" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Our Work</li></a>
+                    <a href="#about" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>About</li></a>
+                </ul>
+            </div>
+
+            <div class="hidden md:block hover:-translate-y-2 transition duration-300">
+                <a href="#contact" class="py-2 px-4 outline rounded-lg hover:outline hover:outline-primary hover:text-primary transition duration-400 md:text-lg">Contact</a>
+            </div>
+
+            <div id="hamburger" class="md:hidden w-6 h-6 flex flex-col justify-center gap-2">
+                <span id="bar1" class="w-6 h-0.5 bg-text-primary rounded-full transition-transform duration-700"></span>
+                <span id="bar2" class="w-6 h-0.5 bg-text-primary rounded-full transition-transform duration-700"></span>
+                <span id="bar3" class="w-6 h-0.5 bg-text-primary rounded-full transition-transform duration-700"></span>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden w-full h-auto p-5 bg-primary opacity-0 -translate-y-4 transition-all duration-700 pointer-events-none">
+            <ul class="text-center flex flex-col gap-3">
+                <a href="#collections" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Collections</li></a>
+                <a href="#our-work" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Our Work</li></a>
+                <a href="#about" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>About</li></a>
+                <a href="#contact" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Contact</li></a>
+            </ul>
+        </div>
+    </header>
+    
+    <main class="mt-25 px-5 mb-20">
+
+         <div class="mb-5">
+            <h1 class="text-white font-bold text-xl">Gallery</h1>
+            <p class="text-text-muted">All the pieces we've worked on</p>
+        </div>
+
+        <!-- Gallery Tabs and cards -->
+        <div>
+
+            <div id="filter-tabs" class="flex gap-2 overflow-x-auto py-2 px-1 mb-5">
+                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap" data-filter="all">All</button>
+
+                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap" data-filter="living-room">Living Room</button>
+
+                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap" data-filter="bedroom">Bedroom</button>
+
+                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap" data-filter="tables">Tables</button>
+
+                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap" data-filter="office">Office</button>
+            </div>
+
+            <div id="gallery-grid">
+                <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="living-room">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%] lg:h-[70%]">
+
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Under Stair Shelf</h3>
+                            <p class="text-text-muted lg:text-lg">Living room</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="office">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg" alt="Clean work desk" class="h-[60%] lg:h-[70%]">
+
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Clean Work Desk</h3>
+                            <p class="text-text-muted lg:text-lg">Office</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="bedroom">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg" alt="Black Bed" class="h-[60%] lg:h-[70%]">
+
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Black Bedframe</h3>
+                            <p class="text-text-muted lg:text-lg">Bedroom</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5" data-category="bedroom">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%] lg:h-[70%]">
+
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Brown Drawer</h3>
+                            <p class="text-text-muted lg:text-lg">Bedroom</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="living-room">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%] lg:h-[70%]">
+
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Under Stair Shelf</h3>
+                            <p class="text-text-muted lg:text-lg">Living room</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="office">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg" alt="Clean work desk" class="h-[60%] lg:h-[70%]">
+
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Clean Work Desk</h3>
+                            <p class="text-text-muted lg:text-lg">Office</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="bedroom">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg" alt="Black Bed" class="h-[60%] lg:h-[70%]">
+
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Black Bedframe</h3>
+                            <p class="text-text-muted lg:text-lg">Bedroom</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5" data-category="bedroom">
+                        <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%] lg:h-[70%]">
+
+                        <div class="flex flex-col lg:gap-3">
+                            <h3 class="text-white font-bold lg:text-xl">Brown Drawer</h3>
+                            <p class="text-text-muted lg:text-lg">Bedroom</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <section class="mb-5 pt-5 border-t border-text-muted">
+
+            <div>
+                <div class="flex flex-col gap-4 items-center lg:flex-row lg:justify-evenly">
+
+                    <div class="flex flex-col gap-4 items-center lg:items-start lg:gap-2">
+                        <h2 class="text-white text-xl font-semibold md:text-2xl">Home Drip</h2>
+                        <p class="text-text-muted text-center md:text-lg">Handcrafted furniture and interiors, built to fit your life.</p>
+                    </div>
+
+                    <div class="text-primary text-2xl flex gap-5 md:text-3xl">
+                        <a href="https://www.instagram.com/_homedrip?utm_source=qr&stkn=MTdvbTRqb2RuMW4xbg==" class="hover:-translate-y-2 transition duration-400"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/2348119739827" class="hover:-translate-y-2 transition duration-400"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@homedrip_ng?_r=1&_t=ZS-9ADiIRwLSNQ" class="hover:-translate-y-2 transition duration-400"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+
+                </div>
+
+                <p class="text-text-muted text-center mt-4">&copy;2026 Home Drip. All rights reserved.</p>
+            </div>
+
+        </section>
+    </footer>
+
+    <!-- Gallery Open modal -->
+    <div id="gallery-modal" class="hidden bg-base fixed top-0 left-0 h-screen w-full z-110 overflow-hidden flex items-center">
+
+       
+        <div class="w-full py-15 relative">
+
+            <i class="fas fa-x text-white p-4 bg-surface/50 rounded-full absolute right-5 top-0"></i>
+
+            <i class="fa-solid fa-circle-chevron-left text-white text-lg absolute left-3 top-[50%] -translate-y-[50%]"></i>
+
+            <div class="bg-surface w-[80%] max-h-[60vh] h-[280px] mx-auto rounded-xl">
+
+            </div>
+
+            <i class="fa-solid fa-circle-chevron-right text-white text-lg absolute right-3 top-[50%] -translate-y-[50%]"></i>
+
+            <div class="text-center mt-2">
+                <div class="text-white font-semibold">Black Bedframe</div>
+                <div class="text-text-muted">Bedroom</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- <script>
+        document.body.classList.add('overflow-hidden');
+    </script> -->
+</body>
+</html>

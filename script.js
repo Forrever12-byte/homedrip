@@ -33,3 +33,49 @@ hamburger.addEventListener('click', function() {
         mobileMenu.classList.toggle('pointer-events-none');
     });
 });
+
+// Filter logic
+
+const filterTabs = document.getElementById('filter-tabs');
+const galleryGrid = document.getElementById('gallery-grid');
+const cards = galleryGrid.querySelectorAll('[data-category]');
+const buttons = filterTabs.querySelectorAll('button');
+
+function setActiveButton(activeBtn) {
+    buttons.forEach(btn => {
+        btn.classList.remove('bg-primary');
+        btn.classList.add('outline');
+    });
+    activeBtn.classList.add('bg-primary');
+    activeBtn.classList.remove('outline');
+}
+
+function filterCards(filter) {
+    cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+}
+
+filterTabs.addEventListener('click', function(e) {
+    const clicked = e.target.closest('button');
+    if (!clicked) return;
+
+    filterCards(clicked.dataset.filter);
+    setActiveButton(clicked);
+});
+
+// Apply category from the URL on page load, if present
+const params = new URLSearchParams(window.location.search);
+const urlCategory = params.get('category');
+
+if (urlCategory) {
+    const matchingButton = [...buttons].find(btn => btn.dataset.filter === urlCategory);
+    if (matchingButton) {
+        filterCards(urlCategory);
+        setActiveButton(matchingButton);
+    }
+}
