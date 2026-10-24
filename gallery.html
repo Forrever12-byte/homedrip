@@ -14,14 +14,14 @@
 
             <div class="hidden md:block">
                 <ul class="flex gap-5 md:text-lg md:gap-5">
-                    <a href="#collections" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Collections</li></a>
-                    <a href="#our-work" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Our Work</li></a>
-                    <a href="#about" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>About</li></a>
+                    <a href="index.html#collections" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Collections</li></a>
+                    <a href="index.html#our-work" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Our Work</li></a>
+                    <a href="index.html#about" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>About</li></a>
                 </ul>
             </div>
 
             <div class="hidden md:block hover:-translate-y-2 transition duration-300">
-                <a href="#contact" class="py-2 px-4 outline rounded-lg hover:outline hover:outline-primary hover:text-primary transition duration-400 md:text-lg">Contact</a>
+                <a href="index.html#contact" class="py-2 px-4 outline rounded-lg hover:outline hover:outline-primary hover:text-primary transition duration-400 md:text-lg">Contact</a>
             </div>
 
             <div id="hamburger" class="md:hidden w-6 h-6 flex flex-col justify-center gap-2">
@@ -33,10 +33,10 @@
 
         <div id="mobile-menu" class="hidden w-full h-auto p-5 bg-primary opacity-0 -translate-y-4 transition-all duration-700 pointer-events-none">
             <ul class="text-center flex flex-col gap-3">
-                <a href="#collections" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Collections</li></a>
-                <a href="#our-work" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Our Work</li></a>
-                <a href="#about" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>About</li></a>
-                <a href="#contact" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Contact</li></a>
+                <a href="index.html#collections" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Collections</li></a>
+                <a href="index.html#our-work" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Our Work</li></a>
+                <a href="index.html#about" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>About</li></a>
+                <a href="index.html#contact" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Contact</li></a>
             </ul>
         </div>
     </header>
@@ -66,7 +66,7 @@
             <div id="gallery-grid">
                 <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="living-room">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="under-stair-shelf" data-category="living-room">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -75,7 +75,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="office">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="clean-work-desk" data-category="office">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg" alt="Clean work desk" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -84,7 +84,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="bedroom">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="black-bedframe" data-category="bedroom">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg" alt="Black Bed" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -93,7 +93,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5" data-category="bedroom">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5 cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="brown-drawer" data-category="bedroom">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="living-room">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="under-stair-shelf" data-category="living-room">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -111,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="office">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="clean-work-desk" data-category="office">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg" alt="Clean work desk" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg" data-category="bedroom">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="black-bedframe" data-category="bedroom">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg" alt="Black Bed" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -129,7 +129,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5" data-category="bedroom">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5 cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="brown-drawer" data-category="bedroom">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -171,34 +171,32 @@
         </section>
     </footer>
 
-    <!-- Gallery Open modal -->
-    <div id="gallery-modal" class="hidden bg-base fixed top-0 left-0 h-screen w-full z-110 overflow-hidden flex items-center">
+    <div id="gallery-modal" class="hidden fixed inset-0 z-110 bg-base/90 backdrop-blur-sm overflow-hidden">
+        <div class="relative h-full w-full flex items-center justify-center px-4 py-8">
+            <button id="close-gallery-modal" class="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-surface/80 text-lg text-white transition hover:bg-primary" aria-label="Close gallery modal">
+                <i class="fas fa-x"></i>
+            </button>
 
-       
-        <div class="w-full py-15 relative">
+            <div class="relative w-full max-w-5xl rounded-2xl bg-base border border-white/10 shadow-2xl">
+                <button id="prev-media" class="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-surface/80 text-white transition hover:bg-primary" aria-label="Previous media item">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </button>
 
-            <i class="fas fa-x text-white p-4 bg-surface/50 rounded-full absolute right-5 top-0"></i>
+                <button id="next-media" class="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-surface/80 text-white transition hover:bg-primary" aria-label="Next media item">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </button>
 
-            <i class="fa-solid fa-circle-chevron-left text-white text-lg absolute left-3 top-[50%] -translate-y-[50%]"></i>
+                <div id="modal-media" class="h-[300px] w-full overflow-hidden rounded-t-2xl bg-black sm:h-[360px] md:h-[480px]"></div>
 
-            <div class="bg-surface w-[80%] max-h-[60vh] h-[280px] mx-auto rounded-xl">
-
-            </div>
-
-            <i class="fa-solid fa-circle-chevron-right text-white text-lg absolute right-3 top-[50%] -translate-y-[50%]"></i>
-
-            <div class="text-center mt-2">
-                <div class="text-white font-semibold">Black Bedframe</div>
-                <div class="text-text-muted">Bedroom</div>
+                <div class="px-5 py-4 text-center sm:px-8">
+                    <div id="modal-title" class="text-lg font-semibold text-white sm:text-2xl">Black Bedframe</div>
+                    <div id="modal-category" class="mt-1 text-sm text-text-muted sm:text-base">Bedroom</div>
+                    <div id="modal-caption" class="mt-2 text-xs text-text-muted sm:text-sm">1 of 3 media items</div>
+                </div>
             </div>
         </div>
-
     </div>
 
     <script src="script.js"></script>
-
-    <!-- <script>
-        document.body.classList.add('overflow-hidden');
-    </script> -->
 </body>
 </html>

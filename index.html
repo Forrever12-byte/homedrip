@@ -127,7 +127,7 @@
 
                 <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="under-stair-shelf" role="button" tabindex="0" aria-label="View Under Stair Shelf">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg" alt="Fancy Stair Shelf" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -136,7 +136,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="clean-work-desk" role="button" tabindex="0" aria-label="View Clean Work Desk">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg" alt="Clean work desk" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -145,7 +145,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="black-bedframe" role="button" tabindex="0" aria-label="View Black Bedframe">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg" alt="Black Bed" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -154,7 +154,7 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5">
+                    <div class="piece-card p-3 bg-surface flex flex-col gap-3 rounded-lg md:hidden lg:flex lg:gap-5 cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl" data-piece-id="brown-drawer" role="button" tabindex="0" aria-label="View Brown Drawer">
                         <img src="https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg" alt="Brown Drawe" class="h-[60%] lg:h-[70%]">
 
                         <div class="flex flex-col lg:gap-3">
@@ -164,7 +164,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="mt-5 py-2 px-4 outline outline-text-muted text-white rounded-lg mx-auto hover:bg-primary transition duration-300 lg:text-xl">See more pieces</a>
+                <a href="gallery.html" class="mt-5 inline-block py-2 px-4 outline outline-text-muted text-white rounded-lg mx-auto hover:bg-primary transition duration-300 lg:text-xl">See more pieces</a>
 
             </div>
 
@@ -340,6 +340,32 @@
 
         </section>
     </footer>
+
+    <div id="gallery-modal" class="hidden fixed inset-0 z-110 bg-base/90 backdrop-blur-sm overflow-hidden">
+        <div class="relative h-full w-full flex items-center justify-center px-4 py-8">
+            <button id="close-gallery-modal" class="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-surface/80 text-lg text-white transition hover:bg-primary" aria-label="Close gallery modal">
+                <i class="fas fa-x"></i>
+            </button>
+
+            <div class="relative w-full max-w-5xl rounded-2xl bg-base border border-white/10 shadow-2xl">
+                <button id="prev-media" class="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-surface/80 text-white transition hover:bg-primary" aria-label="Previous media item">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </button>
+
+                <button id="next-media" class="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-surface/80 text-white transition hover:bg-primary" aria-label="Next media item">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </button>
+
+                <div id="modal-media" class="h-[300px] w-full overflow-hidden rounded-t-2xl bg-black sm:h-[360px] md:h-[480px]"></div>
+
+                <div class="px-5 py-4 text-center sm:px-8">
+                    <div id="modal-title" class="text-lg font-semibold text-white sm:text-2xl"></div>
+                    <div id="modal-category" class="mt-1 text-sm text-text-muted sm:text-base"></div>
+                    <div id="modal-caption" class="mt-2 text-xs text-text-muted sm:text-sm"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
