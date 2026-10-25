@@ -34,6 +34,23 @@ if (hamburger) {
     });
 }
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.01, rootMargin: '0px 0px -24px 0px' });
+
+    document.querySelectorAll('main > section, footer > section, #gallery-grid .piece-card').forEach(element => {
+        element.classList.add('scroll-reveal');
+        revealObserver.observe(element);
+    });
+}
+
 const pieceData = {
     'white-tv-console': {
         title: 'White TV Console',
@@ -43,19 +60,19 @@ const pieceData = {
             { type: 'video', src: 'https://res.cloudinary.com/pnfbjbp5/video/upload/v1792921961/finished-tv-console-video_ts4lb9.mp4' }
         ]
     },
+    'black-bed-frame': {
+        title: 'Shiny Black Bedframe',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792916895/black-bedframe_msoxgn.jpg' }
+        ]
+    },
     'under-stair-shelf': {
         title: 'Under Stair Shelf',
         category: 'living-room',
         media: [
             { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg' },
             { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792921344/stair-shelf_hjtlfd.jpg' }
-        ]
-    },
-    'black-bed-frame': {
-        title: 'Shiny Black Bedframe',
-        category: 'bedroom',
-        media: [
-            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792916895/black-bedframe_msoxgn.jpg' }
         ]
     },
     'clean-work-desk': {
@@ -90,7 +107,7 @@ const pieceData = {
         ]
     },
     'l-shaped-blue-sofa': {
-        title: 'L-Shaped Blue Sofa',
+        title: 'Blue L-Shaped Sofa',
         category: 'living-room',
         media: [
             { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792912621/l-shaped-blue-sofa_rjgvfv.jpg' }
@@ -133,7 +150,7 @@ const pieceData = {
     },
     'black-l-shaped-chair': {
         title: 'Black L-Shaped Chair',
-        category: 'bedroom',
+        category: 'living-room',
         media: [
             { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913441/black-l-shaped-sofa_dqg8j2.jpg' }
         ]
@@ -234,9 +251,9 @@ const pieceData = {
             { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792924265/brown-workstation_vxmbbl.jpg' }
         ]
     },
-    'brown-work-desk': {
-        title: 'Brown Work Desk',
-        category: 'office',
+    'black-bed': {
+        title: 'Black Bed',
+        category: 'bedroom',
         media: [
             { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792924488/black-bed-grey-head_c7wvcr.jpg' },
             { type: 'video', src: 'https://res.cloudinary.com/pnfbjbp5/video/upload/v1792922039/black-bedframe-video_slrfum.mp4' }
@@ -255,6 +272,16 @@ const categoryLabels = {
 const filterTabs = document.getElementById('filter-tabs');
 const galleryGrid = document.getElementById('gallery-grid');
 
+if (filterTabs) {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) {
+            filterTabs.classList.add('bg-base');
+        } else {
+            filterTabs.classList.remove('bg-base');
+        }
+    });
+}
+
 if (galleryGrid) {
     Object.entries(pieceData).forEach(([pieceId, piece]) => {
         const card = document.createElement('button');
@@ -268,6 +295,8 @@ if (galleryGrid) {
         image.src = piece.media[0].src;
         image.alt = piece.title;
         image.className = 'h-[220px] w-full object-cover rounded-lg';
+        image.loading = 'lazy';
+        image.decoding = 'async';
 
         const details = document.createElement('div');
         details.className = 'flex flex-col lg:gap-3';

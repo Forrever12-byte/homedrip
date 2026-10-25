@@ -9,11 +9,12 @@
 </head>
 <body class="bg-base relative">
     <header class="fixed top-0 w-full z-100">
-        <nav id="navbar" class="flex justify-between p-4 md:p-10 lg:px-20 text-text-primary">
+        <nav id="navbar" class="flex justify-between p-4 md:px-10 md:py-8 lg:px-50 text-text-primary">
             <div class="text-lg md:text-xl lg:text-2xl">Home Drip</div>
 
             <div class="hidden md:block">
                 <ul class="flex gap-5 md:text-lg md:gap-5">
+                    <a href="index.html" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Home</li></a>
                     <a href="index.html#collections" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Collections</li></a>
                     <a href="index.html#our-work" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>Our Work</li></a>
                     <a href="index.html#about" class="relative hover:text-primary hover:duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"><li>About</li></a>
@@ -33,6 +34,7 @@
 
         <div id="mobile-menu" class="hidden w-full h-auto p-5 bg-primary opacity-0 -translate-y-4 transition-all duration-700 pointer-events-none">
             <ul class="text-center flex flex-col gap-3">
+                <a href="index.html#collections" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Home</li></a>
                 <a href="index.html#collections" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Collections</li></a>
                 <a href="index.html#our-work" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>Our Work</li></a>
                 <a href="index.html#about" class="p-3 border rounded-lg text-white font-semibold active:bg-base"><li>About</li></a>
@@ -41,28 +43,28 @@
         </div>
     </header>
     
-    <main class="mt-25 px-5 mb-20 lg:px-20">
+    <main class="mt-25 md:mt-35 px-5 md:px-10 lg:px-50">
 
          <div class="mb-5">
-            <h1 class="text-white font-bold text-xl">Gallery</h1>
+            <h1 class="text-white font-bold text-2xl md:text-4xl">Gallery</h1>
             <p class="text-text-muted">All the pieces we've worked on</p>
         </div>
 
         <!-- Gallery Tabs and cards -->
-        <div>
+        <div class="mb-10">
 
-            <div id="filter-tabs" class="flex gap-2 overflow-x-auto py-2 px-1 mb-5">
-                <button class="py-1 px-4 bg-primary rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="all">All</button>
+            <div id="filter-tabs" class="flex gap-2 overflow-x-auto py-4 md:py-6 px-1 mb-8 sticky top-15 md:top-20 z-10">
+                <button class="py-1 px-4 md:py-3 md:px-6 bg-primary rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="all">All</button>
 
-                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="living-room">Living Room</button>
+                <button class="py-1 px-4 md:py-3 md:px-6 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="living-room">Living Room</button>
 
-                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="bedroom">Bedroom</button>
+                <button class="py-1 px-4 md:py-3 md:px-6 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="bedroom">Bedroom</button>
 
-                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="tables">Tables</button>
+                <button class="py-1 px-4 md:py-3 md:px-6 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="tables">Tables</button>
 
-                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="office">Office</button>
+                <button class="py-1 px-4 md:py-3 md:px-6 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="office">Office</button>
 
-                <button class="py-1 px-4 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="bathroom">Bathroom</button>
+                <button class="py-1 px-4 md:py-3 md:px-6 outline rounded-full text-white font-semibold whitespace-nowrap cursor-pointer hover:-translate-y-1 transition" data-filter="bathroom">Bathroom</button>
             </div>
 
             <div id="gallery-grid" class="grid grid-cols-1 gap-3 md:grid-cols-3 lg:grid-cols-4"></div>
