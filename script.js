@@ -34,8 +34,257 @@ if (hamburger) {
     });
 }
 
+const pieceData = {
+    'white-tv-console': {
+        title: 'White TV Console',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792912791/tv-console_c47ill.jpg' },
+            { type: 'video', src: 'https://res.cloudinary.com/pnfbjbp5/video/upload/v1792921961/finished-tv-console-video_ts4lb9.mp4' }
+        ]
+    },
+    'under-stair-shelf': {
+        title: 'Under Stair Shelf',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg' },
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792921344/stair-shelf_hjtlfd.jpg' }
+        ]
+    },
+    'black-bed-frame': {
+        title: 'Shiny Black Bedframe',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792916895/black-bedframe_msoxgn.jpg' }
+        ]
+    },
+    'clean-work-desk': {
+        title: 'Clean Work Desk',
+        category: 'office',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg' }
+        ]
+    },
+    'black-bedframe': {
+        title: 'Black Bedframe',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg' }
+        ]
+    },
+    'brown-drawer': {
+        title: 'Brown Drawer',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg' },
+            { type: 'video', src: 'https://res.cloudinary.com/pnfbjbp5/video/upload/v1792922022/brown-drawer-video_xvcf9g.mp4' }
+        ]
+    },
+    'chilling-spot': {
+        title: 'Chilling Spot',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792921955/sitting-area_jxcnhw.jpg' },
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792921694/WhatsApp_Image_2026-09-22_at_5.46.08_PM_pztxao.jpg' },
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792921693/WhatsApp_Image_2026-09-22_at_5.46.09_PM_lbzwii.jpg' }
+        ]
+    },
+    'l-shaped-blue-sofa': {
+        title: 'L-Shaped Blue Sofa',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792912621/l-shaped-blue-sofa_rjgvfv.jpg' }
+        ]
+    },
+    'brown-large-bed': {
+        title: 'Brown Large Bed',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792912281/brown-large-bed_fdu9mi.jpg' }
+        ]
+    },
+    'clean-black-bedframe': {
+        title: 'Clean Black Bedframe',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792912089/clean-black-bedframe_hywrdk.jpg' }
+        ]
+    },
+    'black-center-table': {
+        title: 'Black Center Table',
+        category: 'tables',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792911543/black-center-table_ka2tto.jpg' }
+        ]
+    },
+    'l-shaped-chair': {
+        title: 'L-Shaped Chair',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792912756/l-shaped-chair_djpfqv.jpg' }
+        ]
+    },
+    'black-white-table': {
+        title: 'Black & White Center Table',
+        category: 'tables',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913486/Black-white-table_nibwfq.jpg' }
+        ]
+    },
+    'black-l-shaped-chair': {
+        title: 'Black L-Shaped Chair',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913441/black-l-shaped-sofa_dqg8j2.jpg' }
+        ]
+    },
+    'brown-white-tv-console': {
+        title: 'Brown & White TV Console',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173473/Designer_b2sk7p.png' },
+            { type: 'video', src: 'https://res.cloudinary.com/pnfbjbp5/video/upload/v1792921704/tv-console-white-sofa_ffgdyk.mp4' }
+        ]
+    },
+    'brown-sofa-set': {
+        title: 'Brown Sofa Set',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790334566/brown-chair-tv-console_bxjtbb.jpg' }
+        ]
+    },
+    'black-work-desk': {
+        title: 'Black Work Desk',
+        category: 'office',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913494/black-work-desk_xl4hrr.jpg' }
+        ]
+    },
+    'blue-luxury-sofa': {
+        title: 'Blue Luxury Sofa',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913547/blue-sofa_oyvnxm.jpg' }
+        ]
+    },
+    'white-tv-stand': {
+        title: 'White TV Stand',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913573/white-tv-stand-1_c1azry.jpg' },
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913571/white-tv-stand_plvktt.jpg' },
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913575/white-tv-stand-2_vpgxjh.jpg' }
+        ]
+    },
+    'simple-brown-work-desk': {
+        title: 'Simple Brown Work Desk',
+        category: 'office',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792913580/work-table-brown_udamdq.jpg' }
+        ]
+    },
+    'bathroom-sink': {
+        title: 'Bathroom Sink',
+        category: 'bathroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792921680/single-toilet-sink_v4hww9.jpg' },
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792921679/toilet-sink_lnwaqn.jpg' }
+        ]
+    },
+    'brown-black-tv-console': {
+        title: 'Brown & Black TV Console',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790332330/Designer_1_mxif1m.webp' },
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792922030/black-white-tv-console_bzmlej.jpg' }
+        ]
+    },
+    'brown-bedframe': {
+        title: 'Brown Bedframe',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792919323/brown-bed-frame_cthn2u.jpg' }
+        ]
+    },
+    'white-shelf': {
+        title: 'White Shelf',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792921690/white-shelf_zwig4h.jpg' }
+        ]
+    },
+    'green-sofas': {
+        title: 'Green Sofas',
+        category: 'living-room',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792923922/green-chairs_e6e1za.jpg' }
+        ]
+    },
+    'grey-bed': {
+        title: 'Grey Bed',
+        category: 'bedroom',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792924182/grey-bed-head_spulea.jpg' }
+        ]
+    },
+    'brown-work-desk': {
+        title: 'Brown Work Desk',
+        category: 'office',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792924265/brown-workstation_vxmbbl.jpg' }
+        ]
+    },
+    'brown-work-desk': {
+        title: 'Brown Work Desk',
+        category: 'office',
+        media: [
+            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1792924488/black-bed-grey-head_c7wvcr.jpg' },
+            { type: 'video', src: 'https://res.cloudinary.com/pnfbjbp5/video/upload/v1792922039/black-bedframe-video_slrfum.mp4' }
+        ]
+    }
+};
+
+const categoryLabels = {
+    'living-room': 'Living room',
+    bedroom: 'Bedroom',
+    tables: 'Tables',
+    office: 'Office',
+    bathroom: 'Bathroom'
+};
+
 const filterTabs = document.getElementById('filter-tabs');
 const galleryGrid = document.getElementById('gallery-grid');
+
+if (galleryGrid) {
+    Object.entries(pieceData).forEach(([pieceId, piece]) => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'piece-card w-full text-left p-3 bg-surface flex flex-col gap-3 lg:gap-5 rounded-lg cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl';
+        card.dataset.pieceId = pieceId;
+        card.dataset.category = piece.category;
+        card.setAttribute('aria-label', `View ${piece.title}`);
+
+        const image = document.createElement('img');
+        image.src = piece.media[0].src;
+        image.alt = piece.title;
+        image.className = 'h-[220px] w-full object-cover rounded-lg';
+
+        const details = document.createElement('div');
+        details.className = 'flex flex-col lg:gap-3';
+
+        const title = document.createElement('h3');
+        title.className = 'text-white font-bold lg:text-xl';
+        title.textContent = piece.title;
+
+        const category = document.createElement('p');
+        category.className = 'text-text-muted lg:text-lg';
+        category.textContent = categoryLabels[piece.category];
+
+        details.append(title, category);
+        card.append(image, details);
+        galleryGrid.append(card);
+    });
+}
 
 if (filterTabs && galleryGrid) {
     const cards = galleryGrid.querySelectorAll('[data-category]');
@@ -80,37 +329,6 @@ if (filterTabs && galleryGrid) {
     }
 }
 
-const pieceData = {
-    'under-stair-shelf': {
-        title: 'Under Stair Shelf',
-        category: 'Living room',
-        media: [
-            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790173311/stair-shelf-light_pn411f.jpg' }
-        ]
-    },
-    'clean-work-desk': {
-        title: 'Clean Work Desk',
-        category: 'Office',
-        media: [
-            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401933/black-white-table-drawer_jtpmjr.jpg' }
-        ]
-    },
-    'black-bedframe': {
-        title: 'Black Bedframe',
-        category: 'Bedroom',
-        media: [
-            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790401973/black-bed_hqzvat.jpg' }
-        ]
-    },
-    'brown-drawer': {
-        title: 'Brown Drawer',
-        category: 'Bedroom',
-        media: [
-            { type: 'image', src: 'https://res.cloudinary.com/pnfbjbp5/image/upload/v1790402412/brown-drawer_i7ycuj.jpg' }
-        ]
-    }
-};
-
 const galleryModal = document.getElementById('gallery-modal');
 const modalMedia = document.getElementById('modal-media');
 const modalTitle = document.getElementById('modal-title');
@@ -143,7 +361,7 @@ function renderMediaItem() {
     }
 
     modalTitle.textContent = currentPiece.title;
-    modalCategory.textContent = currentPiece.category;
+    modalCategory.textContent = categoryLabels[currentPiece.category] || currentPiece.category;
     modalCaption.textContent = currentPiece.media.length > 1
         ? `${currentMediaIndex + 1} of ${currentPiece.media.length} media items`
         : '';
