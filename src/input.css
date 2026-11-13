@@ -20,6 +20,54 @@
   transform: translateY(0);
 }
 
+.motion-link {
+  transition: transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1), color 300ms ease, background-color 300ms ease;
+}
+
+.collection-card,
+.benefit-card,
+.testimonial-card {
+  transition: transform 350ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 350ms ease;
+}
+
+.collection-card > img {
+  transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.collection-card > div:first-child {
+  transition: background-color 350ms ease;
+}
+
+.collection-card:focus-visible,
+.motion-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .motion-link:hover {
+    transform: translateY(-2px);
+  }
+
+  .collection-card:hover,
+  .benefit-card:hover,
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .collection-card:hover {
+    box-shadow: 0 12px 30px rgb(0 0 0 / 0.2);
+  }
+
+  .collection-card:hover > img {
+    transform: scale(1.035);
+  }
+
+  .collection-card:hover > div:first-child {
+    background-color: rgb(20 17 13 / 0.35);
+  }
+}
+
 #navbar {
   transition: background-color 300ms ease;
 }
