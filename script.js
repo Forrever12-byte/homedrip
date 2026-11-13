@@ -1,3 +1,26 @@
+const siteLoader = document.getElementById('site-loader');
+
+if (siteLoader) {
+    let isLoaderHidden = false;
+    const hideLoader = () => {
+        if (isLoaderHidden) return;
+        isLoaderHidden = true;
+        siteLoader.classList.add('is-hidden');
+        siteLoader.addEventListener('transitionend', () => siteLoader.remove(), { once: true });
+        window.setTimeout(() => siteLoader.remove(), 500);
+    };
+
+    window.setTimeout(() => {
+        if (document.readyState === 'complete') {
+            hideLoader();
+        } else {
+            window.addEventListener('load', hideLoader, { once: true });
+        }
+    }, 700);
+
+    window.setTimeout(hideLoader, 8000);
+}
+
 const navbar = document.getElementById('navbar');
 
 if (navbar) {
